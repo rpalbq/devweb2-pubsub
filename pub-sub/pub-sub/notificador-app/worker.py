@@ -8,8 +8,8 @@ def send_email(corpo):
     message = EmailMessage()
     message.set_content(corpo)
     message['Subject'] = 'Notificação da Imagem'
-    message['From'] = 'INSERIR EMAIL DE DESTINO'
-    message['To'] = 'INSERIR EMAIL DE ORIGEM'
+    message['Destinatario'] = 'INSERIR EMAIL DE DESTINO'
+    message['Remetente'] = 'INSERIR EMAIL DE ORIGEM'
     
     with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
         smtp.login('INSERIR EMAIL DE DESTINO', 'INSERIR SENHA DE APP PARA O EMAIL')
